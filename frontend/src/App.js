@@ -694,6 +694,36 @@ const PricingSection = () => {
 
 // Booking Section with Calendly
 const BookingSection = () => {
+  const [activeEvent, setActiveEvent] = useState(0);
+
+  const eventTypes = [
+    {
+      name: "Psihoterapie",
+      url: "https://calendly.com/robertanase04/evaluare-psihologica-clone",
+      icon: Brain
+    },
+    {
+      name: "Evaluare Psihologică",
+      url: "https://calendly.com/robertanase04/evaluare-psihologica",
+      icon: Heart
+    },
+    {
+      name: "Aviz Transporturi",
+      url: "https://calendly.com/robertanase04/evaluare-psihologica-clone-1",
+      icon: Car
+    },
+    {
+      name: "Aviz Port-Armă",
+      url: "https://calendly.com/robertanase04/aviz-psihologic-transporturi-clone",
+      icon: Shield
+    },
+    {
+      name: "Aviz Angajare",
+      url: "https://calendly.com/robertanase04/aviz-psihologic-port-arma-clone",
+      icon: Briefcase
+    }
+  ];
+
   return (
     <section 
       id="programari" 
@@ -716,20 +746,41 @@ const BookingSection = () => {
             Fă Primul Pas
           </h2>
           <p className="text-lg text-beige-700">
-            Alege data și ora care ți se potrivește. Programarea este simplă și rapidă.
+            Selectează tipul de serviciu dorit și alege data și ora care ți se potrivește.
           </p>
         </motion.div>
 
+        {/* Event Type Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {eventTypes.map((event, index) => (
+            <button
+              key={event.name}
+              onClick={() => setActiveEvent(index)}
+              className={`flex items-center gap-2 px-5 py-3 rounded-full font-medium transition-all ${
+                activeEvent === index
+                  ? "bg-olive-500 text-white shadow-lg shadow-olive-500/20"
+                  : "bg-white text-beige-700 border border-beige-300 hover:border-olive-300 hover:text-olive-600"
+              }`}
+              data-testid={`event-tab-${index}`}
+            >
+              <event.icon className="w-4 h-4" />
+              <span className="hidden sm:inline">{event.name}</span>
+              <span className="sm:hidden">{event.name.split(' ').pop()}</span>
+            </button>
+          ))}
+        </div>
+
         {/* Calendly Widget */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          key={activeEvent}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
           className="bg-white rounded-3xl shadow-xl overflow-hidden"
           data-testid="calendly-widget"
         >
           <InlineWidget 
-            url="https://calendly.com/mariana-tanase"
+            url={eventTypes[activeEvent].url}
             styles={{
               height: '700px',
               minWidth: '320px'
@@ -770,6 +821,7 @@ const BookingSection = () => {
     </section>
   );
 };
+
 
 // Contact Section
 const ContactSection = () => {
