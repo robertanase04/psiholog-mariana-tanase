@@ -296,13 +296,13 @@ const AboutSection = () => {
                 <img
                   src={IMAGES.office}
                   alt="Cabinet psihologie"
-                  className="rounded-2xl w-full h-72 object-cover"
+                  className="rounded-2xl w-full h-full object-cover"
                   data-testid="about-image-1"
                 />
                 <img
                   src={IMAGES.family}
                   alt="Mariana cu familia"
-                  className="rounded-2xl w-full h-64 object-cover"
+                  className="rounded-2xl w-full h-72 object-cover"
                   data-testid="about-image-2"
                 />
               </div>
