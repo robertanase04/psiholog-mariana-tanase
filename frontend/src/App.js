@@ -296,7 +296,7 @@ const AboutSection = () => {
                 <img
                   src={IMAGES.office}
                   alt="Cabinet psihologie"
-                  className="rounded-2xl w-full h-48 object-cover"
+                  className="rounded-2xl w-full h-72 object-cover"
                   data-testid="about-image-1"
                 />
                 <img
@@ -310,7 +310,7 @@ const AboutSection = () => {
                 <img
                   src={IMAGES.lifestyle}
                   alt="Personal"
-                  className="rounded-2xl w-full h-80 object-cover"
+                  className="rounded-2xl w-full h-full object-cover"
                   data-testid="about-image-3"
                 />
               </div>
