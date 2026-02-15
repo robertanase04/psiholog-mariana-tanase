@@ -1,34 +1,140 @@
-.App-logo {
-    height: 40vmin;
+/* Smooth animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero image effects */
+.hero-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(95, 111, 82, 0.1) 0%, transparent 50%);
+    z-index: 1;
     pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Glass effect for header */
+.glass-header {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Service card hover effect */
+.service-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.App-link {
-    color: #61dafb;
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(95, 111, 82, 0.15);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Price card styles */
+.price-card {
+    transition: all 0.3s ease;
+}
+
+.price-card:hover {
+    border-color: #5F6F52;
+}
+
+/* Button hover effects */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px -10px rgba(95, 111, 82, 0.4);
+}
+
+/* Decorative blob */
+.blob {
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.3;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Section divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #CCD6C0, transparent);
+}
+
+/* Mobile menu */
+.mobile-menu {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.mobile-menu.closed {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Learning card gradient */
+.learning-card {
+    background: linear-gradient(135deg, #F9F7F2 0%, #FFFFFF 100%);
+}
+
+/* Contact form input focus */
+.contact-input:focus {
+    border-color: #5F6F52;
+    box-shadow: 0 0 0 3px rgba(95, 111, 82, 0.1);
+}
+
+/* Certification badge */
+.certification-badge {
+    background: linear-gradient(135deg, #F4F6F2 0%, #E6EADF 100%);
+}
+
+/* Image mask for about section */
+.about-image-mask {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* Navigation active state */
+.nav-link.active {
+    color: #5F6F52;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #5F6F52;
+}
+
+/* Grain overlay */
+.grain-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
