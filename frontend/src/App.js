@@ -926,8 +926,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-medium text-white mb-1">Program</p>
-                  <p className="text-olive-100">Luni - Vineri: 09:00 - 18:00</p>
-                  <p className="text-olive-100">Sâmbătă: Cu programare</p>
+                  <p className="text-olive-100">Luni - Vineri: 17:30 - 20:00</p>
+                  <p className="text-olive-100">Sâmbătă: 09:00 - 14:00</p>
                 </div>
               </div>
             </div>
