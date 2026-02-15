@@ -1,0 +1,167 @@
+{
+  "brand_identity": {
+    "name": "Psiholog Mariana Tanase",
+    "tone": "Calm, Professional, Empathetic, Authoritative, Earthy",
+    "archetype": "Organic & Earthy",
+    "target_audience": "Adults seeking clinical evaluation, therapy, and psychological assessments in Bucharest."
+  },
+  "typography": {
+    "font_family_heading": "Playfair Display, serif",
+    "font_family_body": "Manrope, sans-serif",
+    "scale": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight",
+      "h2": "text-4xl md:text-5xl font-medium tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body_large": "text-lg md:text-xl leading-relaxed text-muted-foreground",
+      "body": "text-base leading-relaxed text-muted-foreground",
+      "caption": "text-sm tracking-wide uppercase text-muted-foreground"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": "#5F6F52",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#A04030",
+      "secondary_foreground": "#FFFFFF",
+      "background": "#F9F7F2",
+      "surface": "#FFFFFF",
+      "surface_muted": "#F0EFE9",
+      "text_main": "#2C2C2C",
+      "text_muted": "#595959",
+      "accent": "#D9CBAE"
+    },
+    "tailwind_config": {
+      "extend": {
+        "colors": {
+          "olive": {
+            "50": "#F4F6F2",
+            "100": "#E6EADF",
+            "200": "#CCD6C0",
+            "300": "#B0C09F",
+            "400": "#92AB7F",
+            "500": "#5F6F52",
+            "600": "#4A5840",
+            "700": "#36412E",
+            "800": "#252C1F",
+            "900": "#151911"
+          },
+          "brick": {
+            "50": "#FDF6F5",
+            "100": "#FAEDEB",
+            "200": "#F5D1CC",
+            "300": "#EEB4AD",
+            "400": "#E48B80",
+            "500": "#A04030",
+            "600": "#853528",
+            "700": "#6A2B20",
+            "800": "#502018",
+            "900": "#351510"
+          },
+          "beige": {
+            "50": "#FDFCFA",
+            "100": "#F9F7F2",
+            "200": "#F0EFE9",
+            "300": "#E6E4DC",
+            "400": "#D9D6CC",
+            "500": "#CFCBC0",
+            "600": "#A6A29A",
+            "700": "#7D7A73",
+            "800": "#53514D",
+            "900": "#2A2926"
+          }
+        }
+      }
+    }
+  },
+  "layout_strategies": {
+    "container": "container mx-auto px-4 md:px-8 max-w-7xl",
+    "section_spacing": "py-24 md:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12",
+    "card_style": "bg-white/60 backdrop-blur-sm border border-olive-100 p-8 rounded-2xl hover:shadow-lg hover:border-olive-200 transition-all duration-300",
+    "glass_header": "fixed top-0 w-full z-50 bg-beige-100/80 backdrop-blur-md border-b border-olive-100/50"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-olive-500 hover:bg-olive-600 text-white rounded-full px-8 py-4 text-lg font-medium transition-all hover:scale-105 shadow-md shadow-olive-500/20",
+      "secondary": "bg-transparent border-2 border-olive-500 text-olive-600 hover:bg-olive-50 rounded-full px-8 py-4 text-lg font-medium transition-all"
+    },
+    "cards": {
+      "service_card": "group relative overflow-hidden bg-white rounded-3xl p-8 border border-beige-200 hover:border-olive-300 transition-all duration-500 hover:shadow-xl",
+      "price_card": "bg-white rounded-2xl p-8 border border-beige-200 shadow-sm hover:shadow-md transition-all"
+    },
+    "images": {
+      "hero_frame": "relative rounded-[2rem] overflow-hidden shadow-2xl shadow-olive-900/10 rotate-1 hover:rotate-0 transition-transform duration-700 ease-out",
+      "soft_edge": "rounded-2xl overflow-hidden"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_portrait": {
+        "url": "https://customer-assets.emergentagent.com/job_counseling-hub-20/artifacts/rx28xbik_WhatsApp%20Image%202026-02-15%20at%2013.18.25%287%29.jpeg",
+        "alt": "Psiholog Mariana Tanase Portrait",
+        "usage": "Hero Section - Main visual"
+      },
+      "office_context": {
+        "url": "https://customer-assets.emergentagent.com/job_counseling-hub-20/artifacts/glsmldev_WhatsApp%20Image%202026-02-15%20at%2013.18.25%281%29.jpeg",
+        "alt": "Cabinet Psihologie Birou",
+        "usage": "Services or Contact Section background/accent"
+      },
+      "family_personal": {
+        "url": "https://customer-assets.emergentagent.com/job_counseling-hub-20/artifacts/xuqtckxv_WhatsApp%20Image%202026-02-15%20at%2013.18.25%286%29.jpeg",
+        "alt": "Mariana Tanase cu familia",
+        "usage": "About Me Section - Emphasize 'Mother' aspect"
+      },
+      "lifestyle_personal": {
+        "url": "https://customer-assets.emergentagent.com/job_counseling-hub-20/artifacts/1n9zc545_WhatsApp%20Image%202026-02-15%20at%2013.18.25%288%29.jpeg",
+        "alt": "Personal Lifestyle",
+        "usage": "About Me or Gallery - Humanizing element"
+      }
+    },
+    "icons_library": "lucide-react"
+  },
+  "visual_enhancers": {
+    "texture": "Use a subtle grain overlay opacity-20 pointer-events-none fixed inset-0 z-[9999] mix-blend-overlay",
+    "blobs": "Use absolute positioned, blurred (blur-3xl) colored blobs (olive-200, brick-100) behind content to create depth",
+    "dividers": "Use organic SVG dividers or generous whitespace (py-32) between sections"
+  },
+  "content_structure": {
+    "nav_links": ["Despre Mine", "Servicii", "Learning", "Prețuri", "Contact"],
+    "hero": {
+      "headline": "Echilibru și claritate pentru mintea ta",
+      "subheadline": "Psiholog Clinician & Psihoterapeut Mariana Tanase. Servicii acreditate de evaluare psihologică și consiliere în București.",
+      "cta": "Programează o ședință"
+    },
+    "services": [
+      {
+        "title": "Psihologie Clinică",
+        "desc": "Evaluare clinică și psihodiagnostic pentru copii și adulți."
+      },
+      {
+        "title": "Psihologia Muncii",
+        "desc": "Avize psihologice pentru angajare și control periodic."
+      },
+      {
+        "title": "Psihologia Transporturilor",
+        "desc": "Testare psihologică pentru obținerea sau preschimbarea permisului auto."
+      },
+      {
+        "title": "Securitate Națională",
+        "desc": "Evaluări pentru permise port-armă și profesii specifice."
+      }
+    ]
+  },
+  "technical_instructions": {
+    "framework": "React + Tailwind CSS",
+    "components_path": "/app/frontend/src/components/ui",
+    "animations": "Use framer-motion for smooth scroll reveals. FadeInUp for text, ScaleIn for images.",
+    "calendly": "Use react-calendly or iframe for the 'Programări' section.",
+    "responsive": "Mobile-first. Ensure images don't overflow on small screens (max-h-[60vh])."
+  },
+  "universal_guidelines": [
+    "Do not use gradients for dark colors.",
+    "Avoid generic centered layouts; use asymmetry.",
+    "Ensure all interactive elements have hover states and data-testid.",
+    "Use 'sonner' for toast notifications.",
+    "Font weights: Use Light (300) for large headings and Medium (500) for body text to maintain elegance."
+  ]
+}
