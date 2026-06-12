@@ -4,8 +4,8 @@ const BASE_URL = "https://psihologmarianatanase.ro";
 
 const SEO = ({ title, description, path = "/", type = "website" }) => {
   const fullTitle = title
-    ? `${title} | Psiholog Mariana Tănase București`
-    : "Psiholog Mariana Tănase | Avize Psihologice și Psihoterapie București";
+    ? `${title} | Psiholog Mariana Tănase`
+    : "Aviz Psihologic București – Permis Auto, Port-Armă | Psiholog Mariana Tănase";
 
   const fullUrl = `${BASE_URL}${path}`;
 
