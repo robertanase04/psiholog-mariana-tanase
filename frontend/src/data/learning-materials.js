@@ -4,7 +4,7 @@ export const learningMaterials = [
   {
     id: "gestionarea-stresului",
     icon: Brain,
-    title: "Gestionarea Stresului în Viața de Zi cu Zi",
+    title: "Gestionarea stresului în viața de zi cu zi",
     category: "Sănătate Mentală",
     readTime: "8 min",
     summary: "Strategii validate științific pentru a reduce stresul cotidian și a preveni epuizarea.",
@@ -50,7 +50,7 @@ Dacă stresul interferează cu activitățile zilnice de peste 2 săptămâni, d
   {
     id: "inteligenta-emotionala",
     icon: Heart,
-    title: "Inteligența Emoțională: Ghid Practic",
+    title: "Inteligența emoțională: ghid practic",
     category: "Dezvoltare Personală",
     readTime: "10 min",
     summary: "Cum să înțelegi, gestionezi și utilizezi eficient emoțiile în viața personală și profesională.",
@@ -96,7 +96,7 @@ Inteligența emoțională nu este fixă — se poate dezvolta la orice vârstă 
   {
     id: "comunicare-familie",
     icon: Users,
-    title: "Comunicarea Eficientă în Familie",
+    title: "Comunicarea eficientă în familie",
     category: "Relații",
     readTime: "7 min",
     summary: "Principii și tehnici pentru o comunicare mai deschisă și mai sănătoasă cu cei dragi.",
@@ -143,7 +143,7 @@ Dacă simțiți că discuțiile escaladează frecvent în certuri, dacă există
   {
     id: "anxietatea-moderna",
     icon: Shield,
-    title: "Anxietatea în Lumea Modernă",
+    title: "Anxietatea în lumea modernă",
     category: "Sănătate Mentală",
     readTime: "9 min",
     summary: "Înțelegerea anxietății, mecanismele ei și strategii concrete pentru a o gestiona eficient.",
@@ -196,7 +196,7 @@ Terapia cognitiv-comportamentală (TCC) este tratamentul cu cea mai solidă baz�
   {
     id: "somn-sanatos",
     icon: Lightbulb,
-    title: "Ghidul Somnului Sănătos",
+    title: "Ghidul somnului sănătos",
     category: "Stil de Viață",
     readTime: "6 min",
     summary: "Reguli esențiale pentru un somn odihnitor și impactul somnului asupra sănătății mentale.",
@@ -248,7 +248,7 @@ Relația este bidirecțională: problemele de sănătate mentală perturbă somn
   {
     id: "limite-sanatoase",
     icon: BookOpen,
-    title: "Cum Să Stabilești Limite Sănătoase",
+    title: "Cum să stabilești limite sănătoase",
     category: "Dezvoltare Personală",
     readTime: "8 min",
     summary: "De ce sunt esențiale limitele personale și cum le comunici ferm, dar cu respect.",
@@ -301,6 +301,253 @@ Persoanele obișnuite cu lipsa ta de limite pot reacționa negativ inițial. Ace
 ## Un principiu de bază
 
 Limitele nu sunt ziduri — sunt garduri cu poartă. Le poți ajusta, le poți negocia, dar existența lor este non-negociabilă pentru sănătatea ta psihică.
+
+---
+
+*Acest material are scop informativ și nu înlocuiește consultul psihologic individualizat.*
+    `
+  },
+  {
+    id: "burnout-profesional",
+    icon: Brain,
+    title: "Burnout-ul profesional: recunoaștere și recuperare",
+    category: "Sănătate Mentală",
+    readTime: "9 min",
+    summary: "Cum recunoști epuizarea profesională, ce o diferențiază de stresul obișnuit și ce poți face concret.",
+    content: `
+## Ce este burnout-ul?
+
+Burnout-ul (epuizarea profesională) este o stare de oboseală fizică, emoțională și mentală cauzată de expunerea prelungită la stres legat de muncă. Organizația Mondială a Sănătății îl clasifică oficial ca fenomen ocupațional.
+
+## Diferența dintre stres și burnout
+
+**Stresul** se caracterizează prin supraangajare — simți că ai prea mult de făcut, dar crezi că dacă ai reuși să controlezi totul, lucrurile s-ar îmbunătăți.
+
+**Burnout-ul** se caracterizează prin dezangajare — simți că nimic din ce faci nu mai contează. Emoția dominantă nu este anxietatea, ci vidul și cinismul.
+
+## Cele 3 dimensiuni ale burnout-ului
+
+### 1. Epuizarea emoțională
+Te simți golit/ă de resurse. Dimineața te trezești deja obosit/ă, fără energie pentru ziua care urmează.
+
+### 2. Depersonalizarea (cinismul)
+Dezvolți o atitudine detașată sau cinic față de colegi, clienți sau munca în sine. Lucruri care înainte îți plăceau acum te lasă indiferent/ă.
+
+### 3. Reducerea eficienței personale
+Simți că nu mai ești la fel de competent/ă ca înainte. Productivitatea scade, erorile cresc, și cu ele — autocritica.
+
+## Semne de avertizare timpurie
+
+- Te gândești la muncă și noaptea, dar fără a găsi soluții
+- Amâni constant sarcini care înainte erau rutină
+- Ești iritabil/ă cu colegii sau cu familia din cauza muncii
+- Ai simptome fizice recurente: dureri de cap, probleme digestive, tensiune musculară
+- Te simți vinovat/ă când nu lucrezi, dar nu ai energie să lucrezi
+- Ai renunțat la hobby-uri și activități sociale
+
+## Strategii de recuperare
+
+### Pasul 1: Recunoaște situația
+Burnout-ul nu este lene și nu este slăbiciune. Este un semnal că ceva în echilibrul muncă–viață s-a rupt.
+
+### Pasul 2: Stabilește micro-limite imediate
+Nu poți schimba totul dintr-o dată. Începe cu un singur lucru: nu citești email-uri după o anumită oră, sau iei pauza de prânz fără telefon.
+
+### Pasul 3: Recuperarea activă
+Odihna pasivă (scrolling pe telefon, binge-watching) nu regenerează. Alege activități care te reconectează cu tine: mișcare, natură, conversații autentice.
+
+### Pasul 4: Reevaluează valorile
+Întreabă-te: „Această muncă reflectă cine sunt și ce vreau?" Burnout-ul apare adesea când valorile personale sunt în conflict cu cerințele profesionale.
+
+## Când să ceri ajutor?
+
+Dacă simptomele persistă de peste o lună, dacă afectează relațiile sau sănătatea fizică, sau dacă ai gânduri de tip „nu mai pot" — un psiholog te poate ajuta să reconstruiești echilibrul.
+
+---
+
+*Acest material are scop informativ și nu înlocuiește consultul psihologic individualizat.*
+    `
+  },
+  {
+    id: "copii-emotii",
+    icon: Users,
+    title: "Cum ajuți un copil să-și gestioneze emoțiile",
+    category: "Relații",
+    readTime: "7 min",
+    summary: "Ghid pentru părinți: cum susții dezvoltarea emoțională a copilului fără a invalida ce simte.",
+    content: `
+## De ce au copiii reacții emoționale intense?
+
+Creierul unui copil este în dezvoltare. Cortexul prefrontal — zona responsabilă de autoreglare — nu se maturizează complet până la vârsta de 25 de ani. Aceasta înseamnă că un copil de 5 ani nu are echipamentul neurologic pentru a se calma singur la fel ca un adult.
+
+## Ce NU funcționează
+
+- **„Nu mai plânge!"** — invalidează emoția și învață copilul că anumite sentimente sunt inacceptabile
+- **„Nu e nimic grav"** — pentru copil, în acel moment, ESTE grav
+- **Pedepsirea emoției** — „Du-te în cameră până te calmezi" transmite că emoțiile dificile trebuie ascunse
+- **Ignorarea** — copilul nu învață ce să facă cu ceea ce simte
+
+## Ce funcționează: metoda CALM
+
+### C – Conectează-te
+Coboară la nivelul ochilor copilului. Oferă prezență fizică (o mână pe umăr, un ton calm). Înainte de a rezolva problema, fii alături de emoție.
+
+### A – Acceptă emoția
+„Văd că ești foarte supărat." „E normal să te simți frustrat când se întâmplă asta." Numirea emoției reduce intensitatea ei cu 30-50% (studii de neuroimagistică).
+
+### L – Limitează comportamentul (nu emoția)
+„Ai voie să fii furios. Nu ai voie să lovești." Emoția este întotdeauna validă; comportamentul poate fi redirecționat.
+
+### M – Modelează soluții
+Când copilul s-a calmat (nu în timpul crizei!), explorați împreună: „Ce ai putea face data viitoare când simți așa?" Oferă 2-3 opțiuni concrete.
+
+## Instrumente practice pe vârste
+
+### 3-5 ani
+- Semafor emoțional: roșu (STOP, respir), galben (gândesc), verde (acționez)
+- „Borcanul cu calm" (borcan cu glitter — privește până se liniștește)
+- Cărți cu emoții și fețe expresive
+
+### 6-9 ani
+- Jurnalul emoțiilor (desenat sau scris)
+- Respirația „balon" (inspiră ca și cum ai umfla un balon, expiră încet)
+- Colțul de liniștire (nu e pedeapsă — e un loc ales de copil unde se poate retrage)
+
+### 10-12 ani
+- Conversații despre emoții mixte („Poți fi și bucuros și trist în același timp")
+- Identificarea trigger-elor
+- Diferența între reacție și răspuns
+
+## Un principiu de bază
+
+Copiii nu au nevoie de părinți perfecți. Au nevoie de părinți care recunosc când greșesc și care arată că și adulții își gestionează emoțiile imperfect, dar cu intenție.
+
+---
+
+*Acest material are scop informativ și nu înlocuiește consultul psihologic individualizat.*
+    `
+  },
+  {
+    id: "autocunoastere",
+    icon: Lightbulb,
+    title: "Autocunoașterea: primul pas spre schimbare",
+    category: "Dezvoltare Personală",
+    readTime: "8 min",
+    summary: "De ce autocunoașterea este fundația oricărei schimbări personale și cum o cultivi practic.",
+    content: `
+## Ce este autocunoașterea?
+
+Autocunoașterea este capacitatea de a-ți observa gândurile, emoțiile, pattern-urile comportamentale și motivațiile fără judecată. Nu este introspecție excesivă sau analiză paralizantă — este o atenție curioasă și blândă față de propria experiență interioară.
+
+## De ce contează?
+
+Cercetările arată că persoanele cu un nivel ridicat de autocunoaștere:
+- Iau decizii mai bune
+- Au relații mai satisfăcătoare
+- Sunt mai reziliente la stres
+- Își ating obiectivele mai eficient
+- Au o stimă de sine mai stabilă (nu dependentă de validare externă)
+
+## Cele două dimensiuni
+
+### Autocunoașterea internă
+Claritate despre propriile valori, pasiuni, reacții, puncte forte și limite. Întrebarea centrală: „Cine sunt eu, independent de ce așteaptă alții?"
+
+### Autocunoașterea externă
+Înțelegerea modului în care ești perceput/ă de ceilalți. Întrebarea centrală: „Cum mă văd cei din jur și de ce?"
+
+Ambele dimensiuni sunt necesare. Poți fi foarte introspectiv/ă dar complet detașat/ă de impactul tău asupra celorlalți — sau invers.
+
+## Obstacole frecvente
+
+- **Pilotul automat** — facem lucruri din obișnuință, fără a ne întreba de ce
+- **Mecanismele de apărare** — raționalizăm, negăm sau proiectăm pentru a ne proteja de adevăruri incomode
+- **Narațiunea fixă** — „Eu sunt așa și nu mă schimb" — o identitate rigidă ne împiedică să vedem nuanțele
+- **Frica de ce vom descoperi** — uneori evităm introspecția de teamă că nu ne va plăcea ce găsim
+
+## Exerciții practice
+
+### Jurnalul de 5 minute
+Scrie zilnic, fără cenzură, răspunsul la una dintre aceste întrebări:
+- Ce m-a deranjat azi și de ce?
+- În ce moment m-am simțit cel mai autentic/ă?
+- Ce am evitat să fac și ce se ascunde în spatele evitării?
+
+### Observatorul interior
+De 3 ori pe zi, oprește-te și notează: Ce gândesc? Ce simt? Ce senzații fizice am? Fără a schimba nimic — doar observă.
+
+### Feedback-ul curios
+Întreabă 3 persoane de încredere: „Ce crezi că fac bine? Ce crezi că mă limitează?" Ascultă fără a te apăra.
+
+### Harta valorilor
+Scrie 10 lucruri importante pentru tine. Apoi întreabă-te: viața mea de zi cu zi reflectă aceste valori? Unde sunt discrepanțele?
+
+## Autocunoașterea în psihoterapie
+
+Psihoterapia oferă un cadru structurat și sigur pentru autocunoaștere. Terapeutul funcționează ca o „oglindă" care reflectă pattern-uri pe care nu le poți vedea singur/ă — nu pentru că ești orb/oarbă, ci pentru că ești prea aproape de propria experiență.
+
+---
+
+*Acest material are scop informativ și nu înlocuiește consultul psihologic individualizat.*
+    `
+  },
+  {
+    id: "pregatire-evaluare-psihologica",
+    icon: Shield,
+    title: "Cum te pregătești pentru o evaluare psihologică",
+    category: "Informații Practice",
+    readTime: "5 min",
+    summary: "Ce presupune o evaluare psihologică, cum te pregătești și la ce să te aștepți în cabinet.",
+    content: `
+## Ce este o evaluare psihologică?
+
+Evaluarea psihologică este un proces structurat prin care un psiholog autorizat analizează anumite aspecte ale funcționării tale psihice: atenție, memorie, personalitate, timp de reacție, stabilitate emoțională. Rezultatul este un aviz psihologic — un document oficial cu valoare legală.
+
+## Când ai nevoie de o evaluare?
+
+- Obținerea sau preschimbarea permisului de conducere
+- Obținerea permisului de port-armă
+- Angajarea pe anumite posturi (pază, transport persoane, muncă la înălțime)
+- Control psihologic periodic la locul de muncă
+- Evaluare clinică pentru diagnostic sau recomandare terapeutică
+
+## Cum se desfășoară?
+
+### 1. Interviul inițial (10-15 min)
+Discuție scurtă despre motivul evaluării, istoric medical relevant, consum de medicamente. Scopul este crearea unui context pentru interpretarea testelor.
+
+### 2. Testarea propriu-zisă (20-40 min)
+Vei completa o serie de teste psihologice (pe hârtie sau calculator), adaptate tipului de evaluare. Testele pot include:
+- Chestionare de personalitate
+- Teste de atenție și concentrare
+- Evaluarea timpului de reacție
+- Teste de coordonare perceptiv-motorie
+
+### 3. Eliberarea avizului
+În majoritatea cazurilor, avizul se eliberează în aceeași zi.
+
+## Cum te pregătești
+
+- **Odihnește-te bine** în noaptea anterioară (minimum 7 ore de somn)
+- **Evită alcoolul** cu cel puțin 24 de ore înainte
+- **Evită substanțele stimulante** (cafea excesivă, energizante) în ziua evaluării
+- **Ia-ți medicamentele** obișnuite — informează psihologul despre ele
+- **Vino calm/ă** — evaluarea nu este un examen pe care îl „pici"; este o evaluare obiectivă a funcționării tale
+- **Aduce actul de identitate** (buletin/carte de identitate)
+
+## Ce NU trebuie să faci
+
+- Nu încerca să „trișezi" testele — sunt concepute să detecteze răspunsurile nesincere
+- Nu veni obosit/ă sau după o noapte de nesomn
+- Nu consuma substanțe psihoactive
+
+## Cât durează și cât costă?
+
+Durata variază între 30 și 60 de minute, în funcție de tipul evaluării. Prețurile sunt afișate transparent pe pagina de prețuri a cabinetului.
+
+## Un lucru de reținut
+
+Evaluarea psihologică nu este un obstacol birocratic — este un instrument care îți confirmă că funcționezi optim din punct de vedere psihologic pentru activitatea pe care o desfășori. Majoritatea oamenilor primesc aviz favorabil.
 
 ---
 
