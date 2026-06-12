@@ -78,6 +78,9 @@ agenthub/agents/youtube/db
 
 # Mobile development
 android-sdk/ -e 
+# AI context (local only)
+.copilot/
+
 # Environment files
 *.env
 *.env.*
