@@ -74,6 +74,31 @@ const ServicesPage = () => {
                 <p className="text-beige-700 leading-relaxed">{service.forWhom}</p>
               </div>
 
+              {/* Practical info */}
+              <div className="bg-white rounded-2xl p-8 border border-beige-200 mb-10">
+                <h3 className="font-heading text-xl font-medium text-beige-900 mb-4">
+                  Informații practice
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-start gap-2">
+                    <span className="text-olive-500 font-medium">Durată:</span>
+                    <span className="text-beige-700">{service.duration || "30–60 minute"}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-olive-500 font-medium">Preț:</span>
+                    <span className="text-beige-700">{service.price || "de la 100 RON"}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-olive-500 font-medium">Eliberare aviz:</span>
+                    <span className="text-beige-700">în aceeași zi</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-olive-500 font-medium">Necesar:</span>
+                    <span className="text-beige-700">act de identitate (CI/buletin)</span>
+                  </div>
+                </div>
+              </div>
+
               <Link to="/programari">
                 <Button className="bg-olive-500 hover:bg-olive-600 text-white rounded-full px-8 py-6 text-lg font-medium transition-all hover:scale-105 shadow-lg shadow-olive-500/20">
                   <Calendar className="w-5 h-5 mr-2" />

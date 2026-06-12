@@ -1,9 +1,18 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { learningMaterials } from "@/data/learning-materials";
 import SEO from "@/components/SEO";
+
+// Safely render text with **bold** markers
+const renderBoldText = (text) => {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+  );
+};
 
 const LearningPage = () => {
   const { id } = useParams();
@@ -78,11 +87,7 @@ const LearningPage = () => {
                   if (trimmed.startsWith("- **"))
                     return (
                       <li key={i} className="ml-4 mb-2 text-beige-700 leading-relaxed list-disc">
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: trimmed.slice(2).replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-                          }}
-                        />
+                        {renderBoldText(trimmed.slice(2))}
                       </li>
                     );
                   if (trimmed.startsWith("- "))
@@ -102,11 +107,7 @@ const LearningPage = () => {
                   if (trimmed.startsWith("**"))
                     return (
                       <p key={i} className="text-beige-700 leading-relaxed mb-2">
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: trimmed.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-                          }}
-                        />
+                        {renderBoldText(trimmed)}
                       </p>
                     );
                   return (
@@ -115,6 +116,19 @@ const LearningPage = () => {
                     </p>
                   );
                 })}
+              </div>
+
+              {/* CTA after article */}
+              <div className="mt-12 pt-8 border-t border-beige-200 text-center">
+                <p className="text-beige-700 mb-4">
+                  Ai nevoie de sprijin profesional? Programează o consultație.
+                </p>
+                <Link to="/programari">
+                  <Button className="bg-olive-500 hover:bg-olive-600 text-white rounded-full px-6 py-3 font-medium transition-all hover:scale-105 shadow-md shadow-olive-500/20">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Programează o ședință
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>

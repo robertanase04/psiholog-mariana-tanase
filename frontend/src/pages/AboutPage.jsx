@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { Award, CheckCircle } from "lucide-react";
-import { IMAGES } from "@/data/constants";
+import { Link } from "react-router-dom";
+import { Award, CheckCircle, Calendar, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { IMAGES, CONTACT_INFO } from "@/data/constants";
 import SEO from "@/components/SEO";
 
 const AboutPage = () => {
@@ -31,22 +33,25 @@ const AboutPage = () => {
                 <div className="space-y-4">
                   <img
                     src={IMAGES.office}
-                    alt="Cabinet psihologie"
+                    alt="Cabinet psihologie Mariana Tănase"
                     className="rounded-2xl w-full h-48 object-cover"
+                    loading="lazy"
                     data-testid="about-image-1"
                   />
                   <img
                     src={IMAGES.family}
-                    alt="Mariana Tanase"
+                    alt="Psiholog Mariana Tănase"
                     className="rounded-2xl w-full h-48 object-cover"
+                    loading="lazy"
                     data-testid="about-image-2"
                   />
                 </div>
                 <div className="pt-8">
                   <img
                     src={IMAGES.lifestyle}
-                    alt="Stil de viață"
+                    alt="Psiholog Mariana Tănase - stil personal"
                     className="rounded-2xl w-full h-full object-cover min-h-[260px]"
+                    loading="lazy"
                     data-testid="about-image-3"
                   />
                 </div>
@@ -158,6 +163,34 @@ const AboutPage = () => {
                 <p className="text-beige-700 leading-relaxed">{value.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-olive-50">
+        <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center">
+          <h2 className="font-heading text-2xl md:text-3xl font-medium text-beige-900 mb-4">
+            Vrei să discutăm?
+          </h2>
+          <p className="text-beige-700 mb-8 max-w-2xl mx-auto">
+            Fie că ai nevoie de un aviz psihologic sau de sprijin terapeutic, sunt aici să te ajut. 
+            Programează o ședință sau sună-mă direct.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link to="/programari">
+              <Button className="bg-olive-500 hover:bg-olive-600 text-white rounded-full px-8 py-4 font-medium transition-all hover:scale-105 shadow-md shadow-olive-500/20">
+                <Calendar className="w-4 h-4 mr-2" />
+                Programează o ședință
+              </Button>
+            </Link>
+            <a
+              href={`tel:${CONTACT_INFO.phone}`}
+              className="flex items-center gap-2 text-olive-700 font-medium hover:text-olive-600 transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              {CONTACT_INFO.phoneDisplay}
+            </a>
           </div>
         </div>
       </section>

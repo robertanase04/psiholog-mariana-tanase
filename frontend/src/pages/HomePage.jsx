@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowRight, Award, Calendar, CheckCircle } from "lucide-react";
+import { ArrowRight, Award, Calendar, CheckCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { IMAGES } from "@/data/constants";
+import { IMAGES, CONTACT_INFO } from "@/data/constants";
 import { services } from "@/data/services";
 import SEO from "@/components/SEO";
 
@@ -12,6 +13,37 @@ const fadeInUp = {
   transition: { duration: 0.7 }
 };
 
+const faqItems = [
+  {
+    question: "Cât durează obținerea unui aviz psihologic?",
+    answer: "Evaluarea psihologică durează aproximativ 30–45 de minute, iar avizul este eliberat în aceeași zi. Nu este nevoie de programare prealabilă pentru avize, dar recomandăm să ne contactați pentru confirmare."
+  },
+  {
+    question: "Ce documente trebuie să aduc pentru avizul psihologic?",
+    answer: "Aveți nevoie de actul de identitate (carte de identitate sau pașaport) în original. Pentru avizul de port-armă, este necesar și un certificat medical de la medicul de familie."
+  },
+  {
+    question: "Cât costă un aviz psihologic?",
+    answer: "Tarifele variază în funcție de tipul avizului. Consultați pagina de prețuri pentru detalii actualizate. Prețurile includ toate testele și evaluarea completă."
+  },
+  {
+    question: "Avizul psihologic este valabil la nivel național?",
+    answer: "Da, avizele psihologice eliberate de cabinetul nostru sunt valabile pe întreg teritoriul României și sunt recunoscute de toate instituțiile abilitate."
+  },
+  {
+    question: "Cum mă pot programa pentru o ședință de psihoterapie?",
+    answer: "Puteți programa online prin platforma Calendly (butonul \u201eProgramează\u201d de pe site), telefonic la 0720 053 572, sau prin formularul de contact. Ședințele se desfășoară conform programului afișat."
+  },
+  {
+    question: "Este confidențială evaluarea psihologică?",
+    answer: "Absolut. Toate informațiile sunt strict confidențiale, conform Codului Deontologic al Psihologului și legislației GDPR. Rezultatele sunt comunicate exclusiv persoanei evaluate."
+  },
+  {
+    question: "Pot veni fără programare pentru un aviz psihologic?",
+    answer: "Da, pentru avizele psihologice puteți veni și fără programare în timpul programului de lucru. Totuși, vă recomandăm să sunați înainte pentru a confirma disponibilitatea."
+  }
+];
+
 const HomePage = () => {
   return (
     <>
@@ -20,6 +52,22 @@ const HomePage = () => {
         description="Cabinet psihologic acreditat în București. Avize psihologice pentru permis auto, port-armă, angajare. Eliberare aviz în aceeași zi. Psihoterapie cognitiv-comportamentală. Programează online."
         path="/"
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map(item => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer
+              }
+            }))
+          })}
+        </script>
+      </Helmet>
       {/* Hero */}
       <section className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
         <div className="absolute w-[500px] h-[500px] bg-olive-200/30 rounded-full blur-[100px] -top-20 -left-40 pointer-events-none" />
@@ -55,6 +103,15 @@ const HomePage = () => {
                 </Link>
               </div>
 
+              {/* Quick phone CTA */}
+              <a
+                href={`tel:${CONTACT_INFO.phone}`}
+                className="inline-flex items-center gap-2 mt-6 text-olive-600 hover:text-olive-700 font-medium transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                Sună direct: {CONTACT_INFO.phoneDisplay}
+              </a>
+
               <div className="flex flex-wrap gap-6 sm:gap-8 mt-12 pt-8 border-t border-beige-300">
                 <div>
                   <p className="font-heading text-3xl font-semibold text-olive-600">15+</p>
@@ -65,7 +122,7 @@ const HomePage = () => {
                   <p className="text-sm text-beige-600">Specializări</p>
                 </div>
                 <div>
-                  <p className="font-heading text-3xl font-semibold text-olive-600">1000+</p>
+                  <p className="font-heading text-3xl font-semibold text-olive-600">7000+</p>
                   <p className="text-sm text-beige-600">Clienți ajutați</p>
                 </div>
               </div>
@@ -157,6 +214,48 @@ const HomePage = () => {
                   </span>
                 </Link>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 md:py-32 bg-beige-50">
+        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-heading text-3xl md:text-5xl font-medium text-beige-900 mb-4">
+              Întrebări frecvente
+            </h2>
+            <p className="text-beige-600 text-lg">
+              Răspunsuri la cele mai comune întrebări despre serviciile noastre
+            </p>
+          </motion.div>
+
+          <div className="space-y-4">
+            {faqItems.map((item, index) => (
+              <motion.details
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="group bg-white rounded-2xl border border-beige-200 overflow-hidden"
+              >
+                <summary className="flex items-center justify-between cursor-pointer p-6 text-left font-medium text-beige-900 hover:text-olive-600 transition-colors [&::-webkit-details-marker]:hidden list-none">
+                  <span className="pr-4">{item.question}</span>
+                  <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-olive-100 text-olive-600 text-sm group-open:rotate-45 transition-transform">
+                    +
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-beige-700 leading-relaxed">
+                  {item.answer}
+                </div>
+              </motion.details>
             ))}
           </div>
         </div>

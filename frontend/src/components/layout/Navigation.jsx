@@ -87,7 +87,9 @@ const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-olive-600"
             data-testid="mobile-menu-btn"
-            aria-label="Toggle menu"
+            aria-label={isOpen ? "Închide meniul" : "Deschide meniul"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav-menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -101,6 +103,9 @@ const Navigation = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden overflow-hidden border-t border-beige-200/50"
+              id="mobile-nav-menu"
+              role="navigation"
+              aria-label="Meniu mobil"
               data-testid="mobile-menu"
             >
               <div className="flex flex-col gap-2 py-6">

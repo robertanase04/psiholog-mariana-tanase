@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-olive-700 pt-16 pb-8" data-testid="footer">
+    <footer className="bg-olive-700 pt-16 pb-20 lg:pb-8" data-testid="footer">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -76,9 +76,13 @@ const Footer = () => {
           <p className="text-olive-300 text-sm">
             © {currentYear} Psiholog Mariana Tanase. Toate drepturile rezervate.
           </p>
-          <p className="text-olive-400 text-xs">
-            Acreditat COPSI • 4 specializări
-          </p>
+          <div className="flex items-center gap-4">
+            <Link to="/confidentialitate" className="text-olive-400 hover:text-olive-200 text-xs transition-colors">
+              Politica de confidențialitate
+            </Link>
+            <span className="text-olive-500 text-xs">•</span>
+            <span className="text-olive-400 text-xs">Acreditat COPSI</span>
+          </div>
         </div>
       </div>
     </footer>

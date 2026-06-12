@@ -16,6 +16,8 @@ export const services = [
       "Evaluare pentru copii și adolescenți",
       "Raport psihologic detaliat"
     ],
+    price: "150–200 RON",
+    duration: "50–60 minute",
     forWhom: "Persoane care doresc o evaluare psihologică completă, consiliere pentru probleme emoționale, anxietate, depresie sau dificultăți de adaptare."
   },
   {
@@ -33,6 +35,8 @@ export const services = [
       "Compatibilitate post–persoană",
       "Consiliere organizațională"
     ],
+    price: "100 RON",
+    duration: "30 minute",
     forWhom: "Angajați și candidați care necesită aviz psihologic pentru locuri de muncă ce implică responsabilitate sporită sau condiții speciale."
   },
   {
@@ -50,6 +54,8 @@ export const services = [
       "Testare coordonare perceptiv-motorie",
       "Eliberare aviz în aceeași zi"
     ],
+    price: "150 RON",
+    duration: "30–45 minute",
     forWhom: "Persoane care obțin sau preschimbă permisul de conducere, inclusiv categoriile profesionale (C, D, E)."
   },
   {
@@ -67,6 +73,8 @@ export const services = [
       "Evaluare conform legislației specifice",
       "Baterie completă de teste"
     ],
+    price: "200 RON",
+    duration: "45–60 minute",
     forWhom: "Persoane care solicită permis de port-armă, personal din domeniul pazei și protecției, militari și polițiști."
   }
 ];

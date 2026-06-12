@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Brain, Heart, Car, Shield, Briefcase } from "lucide-react";
-import { InlineWidget } from "react-calendly";
-import { Phone, Mail } from "lucide-react";
+import { Brain, Heart, Car, Shield, Briefcase, ExternalLink, Phone, Mail, Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { CALENDLY_EVENTS, CONTACT_INFO } from "@/data/constants";
 import SEO from "@/components/SEO";
 
@@ -15,8 +13,6 @@ const iconMap = {
 };
 
 const BookingPage = () => {
-  const [activeEvent, setActiveEvent] = useState(0);
-
   return (
     <div className="pt-20">
       <SEO
@@ -25,11 +21,11 @@ const BookingPage = () => {
         path="/programari"
       />
       <section className="py-20 md:py-28">
-        <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-16"
           >
             <span className="text-sm tracking-widest uppercase text-olive-600 font-medium">
               Programări
@@ -38,56 +34,72 @@ const BookingPage = () => {
               Fă primul pas
             </h1>
             <p className="text-lg text-beige-700">
-              Selectează tipul de serviciu dorit și alege data și ora care ți se potrivesc.
+              Alege tipul de serviciu dorit și vei fi redirecționat către calendarul de programări.
             </p>
           </motion.div>
 
-          {/* Event Type Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {/* Service cards with booking links */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
             {CALENDLY_EVENTS.map((event, index) => {
               const Icon = iconMap[event.slug] || Brain;
               return (
-                <button
+                <motion.a
                   key={event.slug}
-                  onClick={() => setActiveEvent(index)}
-                  className={`flex items-center gap-2 px-5 py-3 rounded-full font-medium transition-all ${
-                    activeEvent === index
-                      ? "bg-olive-500 text-white shadow-lg shadow-olive-500/20"
-                      : "bg-white text-beige-700 border border-beige-300 hover:border-olive-300 hover:text-olive-600"
-                  }`}
-                  data-testid={`event-tab-${index}`}
+                  href={event.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.08 }}
+                  className="group flex items-center gap-4 p-5 bg-white rounded-2xl border border-beige-200 hover:border-olive-300 hover:shadow-lg transition-all duration-300"
+                  data-testid={`booking-card-${index}`}
                 >
-                  <Icon className="w-4 h-4" />
-                  <span className="hidden sm:inline">{event.name}</span>
-                  <span className="sm:hidden text-xs">{event.name.split(" ").pop()}</span>
-                </button>
+                  <div className="w-12 h-12 bg-olive-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-olive-500 transition-colors">
+                    <Icon className="w-6 h-6 text-olive-600 group-hover:text-white transition-colors" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-medium text-beige-900 group-hover:text-olive-700 transition-colors">
+                      {event.name}
+                    </p>
+                    <p className="text-sm text-beige-500">Alege data și ora</p>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-beige-400 group-hover:text-olive-500 transition-colors" />
+                </motion.a>
               );
             })}
           </div>
 
-          {/* Calendly Widget */}
+          {/* Main CTA */}
           <motion.div
-            key={activeEvent}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            className="bg-white rounded-3xl shadow-xl overflow-hidden"
-            data-testid="calendly-widget"
+            transition={{ delay: 0.4 }}
+            className="text-center mb-16"
           >
-            <InlineWidget
-              url={CALENDLY_EVENTS[activeEvent].url}
-              styles={{ height: "700px", minWidth: "280px" }}
-            />
+            <Button
+              asChild
+              className="bg-olive-500 hover:bg-olive-600 text-white rounded-full px-8 py-6 text-lg font-medium transition-all hover:scale-105 shadow-lg shadow-olive-500/20"
+            >
+              <a
+                href={CALENDLY_EVENTS[0].url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Programează acum
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            </Button>
           </motion.div>
 
           {/* Alternative contact */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="mt-10 text-center"
+            transition={{ delay: 0.5 }}
+            className="text-center bg-beige-50 rounded-2xl p-8 border border-beige-200"
           >
-            <p className="text-beige-600 mb-4">Preferi să vorbești direct?</p>
+            <p className="text-beige-700 mb-4 font-medium">Preferi să vorbești direct?</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href={`tel:${CONTACT_INFO.phone}`}

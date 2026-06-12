@@ -65,17 +65,43 @@ const PricingPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="mt-12 text-center"
+            className="mt-12"
           >
-            <p className="text-sm text-beige-600 mb-8">
-              * Prețurile pot varia în funcție de complexitatea evaluării. Contactează-mă pentru detalii suplimentare.
-            </p>
-            <Link to="/programari">
-              <Button className="bg-olive-500 hover:bg-olive-600 text-white rounded-full px-8 py-6 text-lg font-medium transition-all hover:scale-105 shadow-lg shadow-olive-500/20">
-                <Calendar className="w-5 h-5 mr-2" />
-                Programează acum
-              </Button>
-            </Link>
+            {/* Info box */}
+            <div className="bg-beige-50 rounded-2xl p-6 md:p-8 border border-beige-200 mb-8">
+              <h3 className="font-heading text-lg font-medium text-beige-900 mb-4">Informații utile</h3>
+              <ul className="space-y-2 text-sm text-beige-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-olive-500 mt-0.5">•</span>
+                  Prețurile afișate sunt finale și includ eliberarea avizului psihologic.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-olive-500 mt-0.5">•</span>
+                  Plata se poate face în numerar sau prin transfer bancar.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-olive-500 mt-0.5">•</span>
+                  Avizele psihologice se eliberează în aceeași zi, la finalul evaluării.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-olive-500 mt-0.5">•</span>
+                  Este necesară prezentarea actului de identitate (buletin/CI) la evaluare.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-olive-500 mt-0.5">•</span>
+                  Prețurile pot varia în funcție de complexitatea evaluării. Contactează-mă pentru detalii.
+                </li>
+              </ul>
+            </div>
+
+            <div className="text-center">
+              <Link to="/programari">
+                <Button className="bg-olive-500 hover:bg-olive-600 text-white rounded-full px-8 py-6 text-lg font-medium transition-all hover:scale-105 shadow-lg shadow-olive-500/20">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Programează acum
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
