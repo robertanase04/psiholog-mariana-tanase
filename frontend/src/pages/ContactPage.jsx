@@ -112,7 +112,7 @@ const ContactPage = () => {
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }}>
               <form
                 onSubmit={handleSubmit}
-                className="bg-white rounded-3xl p-8 border border-beige-200 shadow-sm"
+                className="bg-white rounded-3xl p-5 md:p-8 border border-beige-200 shadow-sm"
                 data-testid="contact-form"
               >
                 <h2 className="font-heading text-2xl font-medium text-beige-900 mb-6">

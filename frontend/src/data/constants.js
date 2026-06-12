@@ -19,27 +19,27 @@ export const CONTACT_INFO = {
 export const CALENDLY_EVENTS = [
   {
     name: "Psihoterapie",
-    url: "https://calendly.com/robertanase04/evaluare-psihologica-clone",
+    url: "https://calendly.com/marianatanase/aviz-psihologic-port-arma-clone",
     slug: "psihoterapie"
   },
   {
     name: "Evaluare Psihologică",
-    url: "https://calendly.com/robertanase04/evaluare-psihologica",
+    url: "https://calendly.com/marianatanase/aviz-psihologic-port-arma-clone",
     slug: "evaluare"
   },
   {
     name: "Aviz Transporturi",
-    url: "https://calendly.com/robertanase04/evaluare-psihologica-clone-1",
+    url: "https://calendly.com/marianatanase/aviz-psihologic-port-arma-clone",
     slug: "transporturi"
   },
   {
     name: "Aviz Port-Armă",
-    url: "https://calendly.com/robertanase04/aviz-psihologic-transporturi-clone",
+    url: "https://calendly.com/marianatanase/aviz-psihologic-port-arma-clone",
     slug: "port-arma"
   },
   {
     name: "Aviz Angajare",
-    url: "https://calendly.com/robertanase04/aviz-psihologic-port-arma-clone",
+    url: "https://calendly.com/marianatanase/aviz-psihologic-port-arma-clone",
     slug: "angajare"
   }
 ];

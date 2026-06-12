@@ -55,7 +55,7 @@ const HomePage = () => {
                 </Link>
               </div>
 
-              <div className="flex gap-8 mt-12 pt-8 border-t border-beige-300">
+              <div className="flex flex-wrap gap-6 sm:gap-8 mt-12 pt-8 border-t border-beige-300">
                 <div>
                   <p className="font-heading text-3xl font-semibold text-olive-600">15+</p>
                   <p className="text-sm text-beige-600">Ani experiență</p>
@@ -82,7 +82,7 @@ const HomePage = () => {
                   <img
                     src={IMAGES.portrait}
                     alt="Psiholog Mariana Tanase"
-                    className="w-full max-w-md lg:max-w-lg object-cover"
+                    className="w-full max-w-md lg:max-w-lg max-h-[60vh] object-cover"
                     data-testid="hero-image"
                   />
                 </div>

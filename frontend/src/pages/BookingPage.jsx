@@ -76,7 +76,7 @@ const BookingPage = () => {
           >
             <InlineWidget
               url={CALENDLY_EVENTS[activeEvent].url}
-              styles={{ height: "700px", minWidth: "320px" }}
+              styles={{ height: "700px", minWidth: "280px" }}
             />
           </motion.div>
 
