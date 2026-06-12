@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, CheckCircle, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { services } from "@/data/services";
+import SEO from "@/components/SEO";
 
 const ServicesPage = () => {
   const { slug } = useParams();
@@ -24,6 +25,11 @@ const ServicesPage = () => {
 
     return (
       <div className="pt-20">
+        <SEO
+          title={`${service.title} – Aviz psihologic București`}
+          description={service.fullDescription.replace(/\s+/g, ' ').trim().slice(0, 155)}
+          path={`/servicii/${service.slug}`}
+        />
         <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-8 max-w-4xl">
             <Link
@@ -84,6 +90,11 @@ const ServicesPage = () => {
   // Services list
   return (
     <div className="pt-20">
+      <SEO
+        title="Servicii – Avize psihologice permis auto, port-armă, angajare"
+        description="Avize psihologice acreditate în București: permis auto (toate categoriile), port-armă, angajare, securitate. Evaluare rapidă, eliberare în aceeași zi."
+        path="/servicii"
+      />
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <motion.div

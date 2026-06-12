@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Award, CheckCircle } from "lucide-react";
 import { IMAGES } from "@/data/constants";
+import SEO from "@/components/SEO";
 
 const AboutPage = () => {
   const certifications = [
@@ -12,7 +13,11 @@ const AboutPage = () => {
 
   return (
     <div className="pt-20">
-      {/* Hero */}
+      <SEO
+        title="Despre mine"
+        description="Psiholog clinician cu peste 15 ani de experiență în București. Acreditare COPSI în 4 specializări: psihologie clinică, muncii, transporturi și securitate națională."
+        path="/despre"
+      />
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">

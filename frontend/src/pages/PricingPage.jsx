@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 import { prices } from "@/data/prices";
+import SEO from "@/components/SEO";
 
 const PricingPage = () => {
   return (
     <div className="pt-20">
+      <SEO
+        title="Prețuri avize psihologice București"
+        description="Tarife transparente: aviz psihologic permis auto 150 RON, port-armă 200 RON, angajare 100 RON. Psihoterapie 150 RON/ședință. Plată numerar sau transfer."
+        path="/preturi"
+      />
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <motion.div

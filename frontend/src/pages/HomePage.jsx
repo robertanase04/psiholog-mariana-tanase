@@ -4,6 +4,7 @@ import { ArrowRight, Award, Calendar, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IMAGES } from "@/data/constants";
 import { services } from "@/data/services";
+import SEO from "@/components/SEO";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -14,6 +15,11 @@ const fadeInUp = {
 const HomePage = () => {
   return (
     <>
+      <SEO
+        title="Avize psihologice și psihoterapie"
+        description="Cabinet psihologic acreditat în București. Avize psihologice pentru permis auto, port-armă, angajare. Eliberare aviz în aceeași zi. Psihoterapie cognitiv-comportamentală. Programează online."
+        path="/"
+      />
       {/* Hero */}
       <section className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
         <div className="absolute w-[500px] h-[500px] bg-olive-200/30 rounded-full blur-[100px] -top-20 -left-40 pointer-events-none" />

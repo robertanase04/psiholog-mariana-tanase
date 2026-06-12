@@ -4,6 +4,7 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { CONTACT_INFO } from "@/data/constants";
+import SEO from "@/components/SEO";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -30,6 +31,11 @@ const ContactPage = () => {
 
   return (
     <div className="pt-20">
+      <SEO
+        title="Contact – Cabinet psihologic București"
+        description="Contactează cabinetul psihologic Mariana Tanase din București. Telefon: 0720 053 572. Program: L-V 17:30-20:00, S 09:00-14:00."
+        path="/contact"
+      />
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">

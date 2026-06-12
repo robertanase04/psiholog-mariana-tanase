@@ -4,6 +4,7 @@ import { Brain, Heart, Car, Shield, Briefcase } from "lucide-react";
 import { InlineWidget } from "react-calendly";
 import { Phone, Mail } from "lucide-react";
 import { CALENDLY_EVENTS, CONTACT_INFO } from "@/data/constants";
+import SEO from "@/components/SEO";
 
 const iconMap = {
   psihoterapie: Brain,
@@ -18,6 +19,11 @@ const BookingPage = () => {
 
   return (
     <div className="pt-20">
+      <SEO
+        title="Programări online – Aviz psihologic în aceeași zi"
+        description="Programează online pentru aviz psihologic permis auto, port-armă sau angajare. Eliberare rapidă, în aceeași zi. Cabinet în București."
+        path="/programari"
+      />
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <motion.div

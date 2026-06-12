@@ -5,9 +5,92 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" />
         <meta name="theme-color" content="#5F6F52" />
+
+        <!-- Structured Data: LocalBusiness + ProfessionalService -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Cabinet Psihologic Mariana Tanase",
+          "alternateName": "Psiholog Mariana Tanase",
+          "description": "Cabinet de psihologie în București. Avize psihologice pentru permis auto, port-armă, angajare. Psihoterapie și consiliere psihologică.",
+          "url": "https://psihologmarianatanase.ro",
+          "telephone": "+40720053572",
+          "email": "maryantanase@yahoo.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "București",
+            "addressCountry": "RO"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "44.4268",
+            "longitude": "26.1025"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "17:30",
+              "closes": "20:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "09:00",
+              "closes": "14:00"
+            }
+          ],
+          "priceRange": "100-200 RON",
+          "areaServed": {
+            "@type": "City",
+            "name": "București"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicii psihologice",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Aviz psihologic permis auto",
+                  "description": "Testare psihologică pentru obținerea sau preschimbarea permisului de conducere, toate categoriile (B, C, D, E)"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Aviz psihologic port-armă",
+                  "description": "Evaluare psihologică pentru obținerea sau reînnoirea permisului de port-armă letală și neletală"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Aviz psihologic angajare",
+                  "description": "Evaluare psihologică pentru angajare și control periodic conform legislației muncii"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Psihoterapie și consiliere psihologică",
+                  "description": "Ședințe individuale de psihoterapie cognitiv-comportamentală pentru anxietate, depresie și stres"
+                }
+              }
+            ]
+          }
+        }
+        </script>
+
         <!-- SEO basic -->
-<title>Psiholog Mariana Tănase | Psihoterapie și Consiliere Psihologică</title>
-<meta name="description" content="Cabinet de psihologie în București. Ședințe de psihoterapie și consiliere pentru anxietate, depresie, stres, relații și dezvoltare personală. Programează o ședință." />
+<title>Aviz Psihologic București | Permis Auto, Port-Armă, Angajare – Psiholog Mariana Tanase</title>
+<meta name="description" content="Cabinet psihologic acreditat în București. Avize psihologice pentru permis auto, port-armă, angajare. Psihoterapie și consiliere. Programează online – eliberare aviz în aceeași zi." />
+<meta name="keywords" content="aviz psihologic bucuresti, aviz psihologic permis auto, aviz port arma bucuresti, psiholog bucuresti, evaluare psihologica, aviz angajare, psihoterapie bucuresti, cabinet psihologic" />
 
 <!-- Open Graph (WhatsApp / Facebook / LinkedIn) -->
 <meta property="og:title" content="Psiholog Mariana Tănase | Psihoterapie și Consiliere" />

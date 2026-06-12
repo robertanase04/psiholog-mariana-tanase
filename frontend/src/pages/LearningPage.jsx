@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import { learningMaterials } from "@/data/learning-materials";
+import SEO from "@/components/SEO";
 
 const LearningPage = () => {
   const { id } = useParams();
@@ -26,6 +27,11 @@ const LearningPage = () => {
 
     return (
       <div className="pt-20">
+        <SEO
+          title={article.title}
+          description={article.summary}
+          path={`/resurse/${article.id}`}
+        />
         <article className="py-20 md:py-28">
           <div className="container mx-auto px-4 md:px-8 max-w-3xl">
             <Link
@@ -126,6 +132,11 @@ const LearningPage = () => {
 
   return (
     <div className="pt-20">
+      <SEO
+        title="Resurse – Articole despre sănătate mentală"
+        description="Materiale educaționale gratuite: gestionarea stresului, anxietate, inteligență emoțională, comunicare, burnout. Scrise de psiholog clinician."
+        path="/resurse"
+      />
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl">
           <motion.div

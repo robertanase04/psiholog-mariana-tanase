@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import HomePage from "@/pages/HomePage";
@@ -22,29 +24,32 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <Router>
-      <div className="App font-body" data-testid="app">
-        <Toaster position="top-right" richColors />
-        <ScrollToTop />
-        <Navigation />
+    <HelmetProvider>
+      <Router>
+        <div className="App font-body" data-testid="app">
+          <Toaster position="top-right" richColors />
+          <Analytics />
+          <ScrollToTop />
+          <Navigation />
 
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/despre" element={<AboutPage />} />
-            <Route path="/servicii" element={<ServicesPage />} />
-            <Route path="/servicii/:slug" element={<ServicesPage />} />
-            <Route path="/resurse" element={<LearningPage />} />
-            <Route path="/resurse/:id" element={<LearningPage />} />
-            <Route path="/preturi" element={<PricingPage />} />
-            <Route path="/programari" element={<BookingPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/despre" element={<AboutPage />} />
+              <Route path="/servicii" element={<ServicesPage />} />
+              <Route path="/servicii/:slug" element={<ServicesPage />} />
+              <Route path="/resurse" element={<LearningPage />} />
+              <Route path="/resurse/:id" element={<LearningPage />} />
+              <Route path="/preturi" element={<PricingPage />} />
+              <Route path="/programari" element={<BookingPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </main>
 
-        <Footer />
-      </div>
-    </Router>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
